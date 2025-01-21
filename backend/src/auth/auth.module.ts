@@ -23,7 +23,7 @@ import { User } from 'src/auth/entities/user.entity';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
         return {
-          secret: configService.get('JWT_SECRET'),
+          secret: configService.get('BACKEND_JWT_SECRET'),
           signOptions: {
             expiresIn: '2h'
           }

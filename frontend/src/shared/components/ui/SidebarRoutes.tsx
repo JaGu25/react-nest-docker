@@ -2,7 +2,7 @@ import SidebarItem from "@/shared/components/ui/SidebarItem";
 import { Building2, PanelsTopLeft } from "lucide-react";
 
 const dataGeneral = [
-  { icon: PanelsTopLeft, label: "Dashboard", href: "/admin/" },
+  { icon: PanelsTopLeft, label: "Dashboard", href: "/admin" },
   { icon: Building2, label: "Notes", href: "/admin/notes" },
 ];
 

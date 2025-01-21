@@ -11,27 +11,31 @@ export class NoteController {
   constructor(private readonly noteService: NoteService) { }
 
   @Post()
+  @Auth()
   create(@Body() createNoteDto: CreateNoteDto) {
     return this.noteService.create(createNoteDto);
   }
 
   @Get()
-  @Auth(Roles.admin)
+  @Auth()
   findAll() {
     return this.noteService.findAll();
   }
 
   @Get(':id')
+  @Auth()
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.noteService.findOne(id);
   }
 
   @Patch(':id')
+  @Auth()
   update(@Param('id', ParseIntPipe) id: number, @Body() updateNoteDto: UpdateNoteDto) {
     return this.noteService.update(id, updateNoteDto);
   }
 
   @Delete(':id')
+  @Auth()
   remove(@Param('id', ParseIntPipe) id: number) {
     return this.noteService.remove(id);
   }

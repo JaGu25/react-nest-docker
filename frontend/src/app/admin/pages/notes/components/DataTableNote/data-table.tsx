@@ -19,7 +19,7 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
 }
 
-export function NoteDataTable<TData, TValue>({
+export function DataTableNote<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {

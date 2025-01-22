@@ -97,6 +97,7 @@ const FormLogin = () => {
               Log In
             </LoadingButton>
             <Button
+              type="button"
               onClick={() => navigate("/auth/register")}
               variant={"link"}
               className="w-full"

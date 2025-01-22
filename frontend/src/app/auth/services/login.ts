@@ -39,7 +39,6 @@ export class AuthService {
             const { data } = await api.get<LoginResponse>('/auth/check-status');
             return this.loginAdapter(data);
         } catch (error) {
-            console.log(error)
             throw new Error('UnAuthorized')
         }
     }

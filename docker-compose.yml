@@ -25,13 +25,10 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+        VITE_APP_ENV: ${VITE_APP_ENV}
     container_name: react_app
-    env_file:
-      - ./.env
-    environment:
-      - NODE_ENV=production
-      - VITE_API_URL=${VITE_API_URL}
-      - VITE_APP_ENV=${VITE_APP_ENV}
     networks:
       - app-network
     ports:

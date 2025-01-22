@@ -15,7 +15,6 @@ import { useError } from "@/shared/providers/ErrorProvider";
 import { handleError } from "@/shared/utils/handle-error";
 import { AxiosError } from "axios";
 import { toast } from "@/shared/hooks/use-toast";
-import { useNavigate } from "react-router";
 import { formNoteSchema } from "@/app/admin/pages/notes/components/FormNote/schema";
 import { NoteRow } from "@/app/admin/pages/notes/interfaces/note.interface";
 import noteService from "@/app/admin/pages/notes/services/note.service";
